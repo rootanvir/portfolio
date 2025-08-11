@@ -1,0 +1,8 @@
+ and small custom styles */
+@media print {
+  .no-print { display: none !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}
+
+/* Optional: utility for clamping text if Tailwind's line-clamp isn't available */
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
