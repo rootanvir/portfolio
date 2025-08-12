@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tanvir Ahmed Tuhin — Portfolio</title>
-  <meta name="description" content="Personal portfolio of Your Name — projects, experience, education, skills, and contact." />
-  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta name="description" content="Personal portfolio of Tanvir Ahmed Tuhin — projects, experience, education, skills, and contact." />
+  <meta property="og:title" content="Tanvir Ahmed Tuhin — Portfolio" />
   <meta property="og:description" content="Projects, experience, education, skills, and contact." />
   <meta property="og:type" content="website" />
 
-  <!-- Tailwind via CDN for utility classes -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!--  Apply saved theme BEFORE paint -->
   <script>
-    tailwind.config = {
-      theme: { extend: { colors: { brand: { DEFAULT: '#0ea5e9', dark: '#0284c7' } } } }
-    };
-  </script>
-
-  <!-- Our custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Respect saved theme before paint -->
-  <script>
-    (function(){
+    (function () {
       const t = localStorage.getItem('theme');
       if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       }
     })();
   </script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--Tailwind config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0ea5e9',
+            'brand-dark': '#0369a1'
+          }
+        }
+      }
+    }
+  </script>
+  <!--Css linked-->
+  <link rel="stylesheet" href="styles.css" />
+
 </head>
+
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <!-- Header / Nav -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-950/60 border-b border-slate-200/70 dark:border-slate-800">
+  <header
+    class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-950/60 border-b border-slate-200/70 dark:border-slate-800">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-2 font-semibold">
         <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">T</span>
@@ -47,13 +59,20 @@
         <a class="hover:text-brand" href="#resume">Resume</a>
       </nav>
       <div class="flex items-center gap-2">
-        <button id="themeBtn" class="no-print rounded-xl px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-700 hover:border-brand/60">Toggle theme</button>
-        <button id="menuBtn" class="no-print md:hidden rounded-xl p-2 border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="themeBtn"
+          class="no-print rounded-xl px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-700 hover:border-brand/60">
+          Toggle theme
+        </button>
+        <button id="menuBtn" class="no-print md:hidden rounded-xl p-2 border border-slate-300 dark:border-slate-700"
+          aria-label="Open menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur">
+    <div id="mobileMenu"
+      class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur">
       <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
         <a class="hover:text-brand" href="#projects">Projects</a>
         <a class="hover:text-brand" href="#experience">Experience</a>
@@ -70,8 +89,10 @@
     <div class="grid md:grid-cols-2 items-center gap-10">
       <!-- Image Section -->
       <div class="order-1 md:order-2 md:justify-self-end relative">
-        <img src="sources/portrait.jpg" alt="Portrait of Tanvir Ahmed Tuhin" class="w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-slate-200/60 dark:ring-slate-800"/>
-        <div class="absolute -bottom-4 -left-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur rounded-xl p-4 shadow-lg ring-1 ring-slate-200/60 dark:ring-slate-800">
+        <img src="sources/portrait.jpg" alt="Portrait of Tanvir Ahmed Tuhin"
+          class="w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-slate-200/60 dark:ring-slate-800" />
+        <div
+          class="absolute -bottom-4 -left-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur rounded-xl p-4 shadow-lg ring-1 ring-slate-200/60 dark:ring-slate-800">
           <p class="text-sm">
             Currently: Building <span class="font-semibold">Project X</span> 🚀
           </p>
@@ -90,18 +111,24 @@
         </h1>
 
         <p class="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-prose">
-          Passionate about building impactful software using modern technologies. Skilled in Python, C++, Java, and exploring AI & IoT projects.
+          Passionate about building impactful software using modern technologies. Skilled in Python, C++, Java, and
+          exploring AI & IoT projects.
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-white font-medium hover:bg-brand-dark shadow-md transition">View Projects</a>
-          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 border-slate-300 dark:border-slate-700 hover:border-brand/60 font-medium shadow-sm transition">Contact Me</a>
+          <a href="#projects"
+            class="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-white font-medium hover:bg-brand-dark shadow-md transition">View
+            Projects</a>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 border-slate-300 dark:border-slate-700 hover:border-brand/60 font-medium shadow-sm transition">Contact
+            Me</a>
         </div>
 
         <ul class="mt-6 flex flex-wrap items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
           <li>📍 Dhaka, BD</li>
           <li>✉️ <a href="mailto:quickmailfly@gmail.com" class="hover:underline">quickmailfly@gmail.com</a></li>
-          <li>🔗 <a href="https://www.github.com/rootanvir" target="_blank" class="hover:underline">github.com/rootanvir</a></li>
+          <li>🔗 <a href="https://www.github.com/rootanvir" target="_blank"
+              class="hover:underline">github.com/rootanvir</a></li>
         </ul>
       </div>
     </div>
@@ -115,8 +142,10 @@
     </div>
 
     <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
-        <img alt="project cover" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"/>
+      <article
+        class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+        <img alt="project cover" class="w-full h-48 object-cover"
+          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" />
         <div class="p-6">
           <div class="flex items-center justify-between">
             <h3 class="font-semibold text-xl">Project Title</h3>
@@ -138,8 +167,10 @@
         </div>
       </article>
 
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
-        <img alt="project cover" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"/>
+      <article
+        class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+        <img alt="project cover" class="w-full h-48 object-cover"
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" />
         <div class="p-6">
           <div class="flex items-center justify-between">
             <h3 class="font-semibold text-xl">Another Project</h3>
@@ -161,8 +192,10 @@
         </div>
       </article>
 
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
-        <img alt="project cover" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1200&auto=format&fit=crop"/>
+      <article
+        class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+        <img alt="project cover" class="w-full h-48 object-cover"
+          src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1200&auto=format&fit=crop" />
         <div class="p-6">
           <div class="flex items-center justify-between">
             <h3 class="font-semibold text-xl">Mobile App</h3>
@@ -221,7 +254,8 @@
     <ol class="relative border-s border-slate-200 dark:border-slate-800 mt-8 space-y-12">
       <li class="ms-6 flex items-start gap-6">
         <span class="absolute -start-2 mt-2 h-5 w-5 rounded-full bg-brand ring-4 ring-white dark:ring-slate-950"></span>
-        <img src="sources/aiub.png" alt="AIUB Logo" class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
+        <img src="sources/aiub.png" alt="AIUB Logo"
+          class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
         <div>
           <h3 class="text-2xl font-semibold">B.Sc. in Computer Science &amp; Engineering</h3>
           <p class="text-lg text-slate-500">2022 – Present</p>
@@ -235,7 +269,8 @@
 
       <li class="ms-6 flex items-start gap-6">
         <span class="absolute -start-2 mt-2 h-5 w-5 rounded-full bg-brand ring-4 ring-white dark:ring-slate-950"></span>
-        <img src="sources/scpsc.png" alt="Savar Cantonment Public School & College Logo" class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
+        <img src="sources/scpsc.png" alt="Savar Cantonment Public School & College Logo"
+          class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
         <div>
           <h3 class="text-2xl font-semibold">Higher Secondary Certificate (HSC)</h3>
           <p class="text-lg text-slate-500">2020</p>
@@ -249,7 +284,8 @@
 
       <li class="ms-6 flex items-start gap-6">
         <span class="absolute -start-2 mt-2 h-5 w-5 rounded-full bg-brand ring-4 ring-white dark:ring-slate-950"></span>
-        <img src="sources/rcpsc.png" alt="Rajendrapur Cantonment Public School & College Logo" class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
+        <img src="sources/rcpsc.png" alt="Rajendrapur Cantonment Public School & College Logo"
+          class="w-16 h-16 object-contain flex-shrink-0 rounded-full border border-slate-200 dark:border-slate-700">
         <div>
           <h3 class="text-2xl font-semibold">Secondary School Certificate (SSC)</h3>
           <p class="text-lg text-slate-500">2018</p>
@@ -269,7 +305,8 @@
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <h3 class="text-xl font-semibold">Languages</h3>
-        <p class="mt-3 text-base md:text-lg text-slate-600 dark:text-slate-300">Python, C++, Java, JavaScript, Kotlin</p>
+        <p class="mt-3 text-base md:text-lg text-slate-600 dark:text-slate-300">Python, C++, Java, JavaScript, Kotlin
+        </p>
       </div>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <h3 class="text-xl font-semibold">Frameworks</h3>
@@ -296,12 +333,16 @@
 
   <!-- Resume -->
   <section id="resume" class="mx-auto max-w-6xl px-4 py-14">
-    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div
+      class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold">Resume</h2>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Keep a concise, one-page PDF. Mirror highlights from your projects and roles.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Keep a concise, one-page PDF. Mirror highlights from
+          your projects and roles.</p>
       </div>
-      <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-white hover:bg-brand-dark">Download PDF</a>
+      <a href="#"
+        class="inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-white hover:bg-brand-dark">Download
+        PDF</a>
     </div>
   </section>
 
@@ -311,15 +352,21 @@
     <div class="mt-6 grid md:grid-cols-2 gap-6">
       <form class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
         <label class="block text-sm font-medium">Name
-          <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Your name" required />
+          <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
+            placeholder="Your name" required />
         </label>
         <label class="block text-sm font-medium mt-3">Email
-          <input type="email" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="you@domain.com" required />
+          <input type="email"
+            class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
+            placeholder="you@domain.com" required />
         </label>
         <label class="block text-sm font-medium mt-3">Message
-          <textarea rows="4" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Say hello…"></textarea>
+          <textarea rows="4"
+            class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
+            placeholder="Say hello…"></textarea>
         </label>
-        <button type="submit" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-white hover:bg-brand-dark">Send</button>
+        <button type="submit"
+          class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-white hover:bg-brand-dark">Send</button>
       </form>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
         <h3 class="font-semibold">Elsewhere</h3>
@@ -342,5 +389,8 @@
 
   <!-- Our JS -->
   <script src="script.js" defer></script>
+
+
 </body>
+
 </html>
