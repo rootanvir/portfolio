@@ -400,31 +400,34 @@
   <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
     <h2 class="text-2xl md:text-3xl font-bold text-brand">Contact</h2>
     <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <form class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+      <form id="contactForm" class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
         <label class="block text-sm font-medium">Name
-          <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
+          <input id="name" name="name"
+            class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
             placeholder="Your name" required />
         </label>
         <label class="block text-sm font-medium mt-3">Email
-          <input type="email"
+          <input id="email" name="email" type="email"
             class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
             placeholder="you@domain.com" required />
         </label>
         <label class="block text-sm font-medium mt-3">Message
-          <textarea rows="4"
+          <textarea id="message" name="message" rows="4"
             class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"
-            placeholder="Say hello…"></textarea>
+            placeholder="Say hello…" required></textarea>
         </label>
         <button type="submit"
           class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-white hover:bg-brand-dark">Send</button>
       </form>
+
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <h3 class="text-xl font-semibold">Elsewhere</h3>
 
         <!-- 3 per row on mobile, 6 on md+ -->
         <div class="mt-4 grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
           <!-- Reusable pattern: icon is black; becomes white in dark via dark:invert -->
-          <a href="#" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
+          <a href="https://www.facebook.com/rootanvir/" target="_blank"
+            class="flex flex-col items-center gap-2 hover:text-brand">
             <div
               class="w-14 h-14 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
               <img src="https://cdn.simpleicons.org/facebook/000000" alt="Facebook" class="w-8 h-8 dark:invert">
@@ -432,7 +435,7 @@
             <span class="text-sm">Facebook</span>
           </a>
 
-          <a href="#" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
+          <a href="https://x.com/rootanvir" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
             <div
               class="w-14 h-14 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
               <img src="https://cdn.simpleicons.org/x/000000" alt="X" class="w-8 h-8 dark:invert">
@@ -440,7 +443,8 @@
             <span class="text-sm">X</span>
           </a>
 
-          <a href="#" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
+          <a href="https://github.com/rootanvir" target="_blank"
+            class="flex flex-col items-center gap-2 hover:text-brand">
             <div
               class="w-14 h-14 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
               <img src="https://cdn.simpleicons.org/github/000000" alt="GitHub" class="w-8 h-8 dark:invert">
@@ -456,7 +460,8 @@
             <span class="text-sm">Gmail</span>
           </a>
 
-          <a href="#" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
+          <a href="https://www.pexels.com/@rootanvir/" target="_blank"
+            class="flex flex-col items-center gap-2 hover:text-brand">
             <div
               class="w-14 h-14 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
               <img src="https://cdn.simpleicons.org/pexels/000000" alt="Pexels" class="w-8 h-8 dark:invert">
@@ -464,11 +469,11 @@
             <span class="text-sm">Pexels</span>
           </a>
 
-          <a href="#" target="_blank" class="flex flex-col items-center gap-2 hover:text-brand">
+          <a href="https://www.linkedin.com/in/rootanvir/" target="_blank"
+            class="flex flex-col items-center gap-2 hover:text-brand">
             <div
               class="w-14 h-14 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
-              <img src="sources/linkdin.png" alt="LinkedIn"
-                class="w-8 h-8 rounded dark:invert">
+              <img src="sources/linkdin.png" alt="LinkedIn" class="w-8 h-8 rounded dark:invert">
             </div>
             <span class="text-sm">LinkedIn</span>
           </a>
