@@ -30,6 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.remove('dark');
   }
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // ------------------------
   // Current year in footer
   // ------------------------
