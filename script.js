@@ -89,3 +89,6 @@ Sender: ${name}
     window.location.href = `mailto:quickmailfly@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 });
+
+
+
